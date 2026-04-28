@@ -35,7 +35,13 @@ jobs:
       # Test
       - name: Run tests
         run: mvn -B test
-
+      - name: Run tests with coverage
+        run: mvn clean test
+      
+      - name: Upload coverage to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: mvn coveralls:report
       # Static analysis
       - name: Run Checkstyle
         run: mvn -B package
