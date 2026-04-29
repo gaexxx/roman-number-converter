@@ -36,7 +36,6 @@ public class IntegerToRomanTest {
 
         assertEquals("III", result);
     }
-}
 @Test
     public void shouldConvert4ToIV() {
         int number = 4;
@@ -63,3 +62,4 @@ public class IntegerToRomanTest {
 
         assertEquals("VI", result);
     }
+}
