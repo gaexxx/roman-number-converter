@@ -99,4 +99,18 @@ public class IntegerToRomanTest {
 
         assertEquals("X", result);
     }
+    @Test
+public void shouldPrint20AsAsciiArt() {
+    String expected =
+        "   __   _\n" +
+        "\ \ / /\ \ / /\n" +
+        " \ V /  \ V / \n" +
+        "  > <    > <  \n" +
+        " / . \  / . \ \n" +
+        "// \\// \_\";
+
+    String result = RomanPrinter.print(20);
+
+    assertEquals(expected, result);
+}
 }
