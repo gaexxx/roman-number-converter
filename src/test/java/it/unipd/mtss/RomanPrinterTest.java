@@ -54,16 +54,15 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
-}
 @Test
     public void shouldPrint4AsAsciiArt() {
         String expected =
-                " __       __\n" +
-                "|   |\ \    / /\n" +
-                "  | |   \ \  / / \n" +
-                "  | |    \ \/ /  \n" +
-                " | |    \  /   \n" +
-                "|__|    \/    ";
+            " _____ __      __\n" +
+            "|_   _|\\ \\    / /\n" +
+            "  | |   \\ \\  / / \n" +
+            "  | |    \\ \\/ /  \n" +
+            " _| |_    \\  /   \n" +
+            "|_____|    \\/    ";
 
         String result = RomanPrinter.print(4);
 
@@ -73,12 +72,12 @@ public class RomanPrinterTest {
     @Test
     public void shouldPrint5AsAsciiArt() {
         String expected =
-                "      \n" +
-                "\ \    / /\n" +
-                " \ \  / / \n" +
-                "  \ \/ /  \n" +
-                "   \  /   \n" +
-                "    \/    ";
+            "__      __\n" +
+            "\\ \\    / /\n" +
+            " \\ \\  / / \n" +
+            "  \\ \\/ /  \n" +
+            "   \\  /   \n" +
+            "    \\/    ";
 
         String result = RomanPrinter.print(5);
 
@@ -88,14 +87,15 @@ public class RomanPrinterTest {
     @Test
     public void shouldPrint6AsAsciiArt() {
         String expected =
-                "       __ \n" +
-                "\ \    / /|   |\n" +
-                " \ \  / /   | |  \n" +
-                "  \ \/ /    | |  \n" +
-                "   \  /    | | \n" +
-                "    \/    |__|";
+            "__      __ _____ \n" +
+            "\\ \\    / /|_   _|\n" +
+            " \\ \\  / /   | |  \n" +
+            "  \\ \\/ /    | |  \n" +
+            "   \\  /    _| |_ \n" +
+            "    \\/    |_____|";
 
         String result = RomanPrinter.print(6);
 
         assertEquals(expected, result);
     }
+}
