@@ -5,15 +5,35 @@
 
 package it.unipd.mtss;
 
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class IntegerToRomanTest 
-{
+public class IntegerToRomanTest {
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldConvert1ToI() {
+        int number = 1;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("I", result);
+    }
+
+    @Test
+    public void shouldConvert2ToII() {
+        int number = 2;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("II", result);
+    }
+
+    @Test
+    public void shouldConvert3ToIII() {
+        int number = 3;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("III", result);
     }
 }
