@@ -99,4 +99,18 @@ public class IntegerToRomanTest {
 
         assertEquals("X", result);
     }
+
+    @Test
+    public void shouldConvertFirstTwentyNumbersToRoman() {
+        String[] expected = {
+            "I", "II", "III", "IV", "V",
+            "VI", "VII", "VIII", "IX", "X",
+            "XI", "XII", "XIII", "XIV", "XV",
+            "XVI", "XVII", "XVIII", "XIX", "XX"
+        };
+
+        for (int i = 1; i <= 20; i++) {
+            assertEquals(expected[i - 1], IntegerToRoman.convert(i));
+        }
+    }    
 }
