@@ -99,18 +99,18 @@ public class IntegerToRomanTest {
 
         assertEquals("X", result);
     }
+
     @Test
-public void shouldPrint20AsAsciiArt() {
-    String expected =
-        "   __   _\n" +
-        "\ \ / /\ \ / /\n" +
-        " \ V /  \ V / \n" +
-        "  > <    > <  \n" +
-        " / . \  / . \ \n" +
-        "// \\// \_\";
+    public void shouldConvertFirstTwentyNumbersToRoman() {
+        String[] expected = {
+            "I", "II", "III", "IV", "V",
+            "VI", "VII", "VIII", "IX", "X",
+            "XI", "XII", "XIII", "XIV", "XV",
+            "XVI", "XVII", "XVIII", "XIX", "XX"
+        };
 
-    String result = RomanPrinter.print(20);
-
-    assertEquals(expected, result);
-}
+        for (int i = 1; i <= 20; i++) {
+            assertEquals(expected[i - 1], IntegerToRoman.convert(i));
+        }
+    }    
 }

@@ -156,18 +156,19 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
     @Test
-public void shouldPrint20AsAsciiArt() {
-    String expected =
-        "   __   _\n" +
-        "\ \ / /\ \ / /\n" +
-        " \ V /  \ V / \n" +
-        "  > <    > <  \n" +
-        " / . \  / . \ \n" +
-        "// \\// \_\";
+    public void shouldPrint20AsAsciiArt() {
+        String expected =
+            "__   ____   __\n" +
+            "\\ \\ / /\\ \\ / /\n" +
+            " \\ V /  \\ V / \n" +
+            "  > <    > <  \n" +
+            " / . \\  / . \\ \n" +
+            "/_/ \\_\\/_/ \\_\\";
 
-    String result = RomanPrinter.print(20);
+        String result = RomanPrinter.print(20);
 
-    assertEquals(expected, result);
-}
+        assertEquals(expected, result);
+    }
 }
