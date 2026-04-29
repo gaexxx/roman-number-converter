@@ -55,3 +55,47 @@ public class RomanPrinterTest {
         assertEquals(expected, result);
     }
 }
+@Test
+    public void shouldPrint4AsAsciiArt() {
+        String expected =
+                " __       __\n" +
+                "|   |\ \    / /\n" +
+                "  | |   \ \  / / \n" +
+                "  | |    \ \/ /  \n" +
+                " | |    \  /   \n" +
+                "|__|    \/    ";
+
+        String result = RomanPrinter.print(4);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrint5AsAsciiArt() {
+        String expected =
+                "      \n" +
+                "\ \    / /\n" +
+                " \ \  / / \n" +
+                "  \ \/ /  \n" +
+                "   \  /   \n" +
+                "    \/    ";
+
+        String result = RomanPrinter.print(5);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrint6AsAsciiArt() {
+        String expected =
+                "       __ \n" +
+                "\ \    / /|   |\n" +
+                " \ \  / /   | |  \n" +
+                "  \ \/ /    | |  \n" +
+                "   \  /    | | \n" +
+                "    \/    |__|";
+
+        String result = RomanPrinter.print(6);
+
+        assertEquals(expected, result);
+    }

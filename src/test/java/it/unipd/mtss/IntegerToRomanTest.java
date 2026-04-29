@@ -37,3 +37,29 @@ public class IntegerToRomanTest {
         assertEquals("III", result);
     }
 }
+@Test
+    public void shouldConvert4ToIV() {
+        int number = 4;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void shouldConvert5ToV() {
+        int number = 5;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("V", result);
+    }
+
+    @Test
+    public void shouldConvert6ToVI() {
+        int number = 6;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("VI", result);
+    }
