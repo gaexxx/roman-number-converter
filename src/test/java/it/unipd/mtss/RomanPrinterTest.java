@@ -87,14 +87,72 @@ public class RomanPrinterTest {
     @Test
     public void shouldPrint6AsAsciiArt() {
         String expected =
-            "__      __ _____ \n" +
+              "__      __ _____ \n" +
             "\\ \\    / /|_   _|\n" +
             " \\ \\  / /   | |  \n" +
             "  \\ \\/ /    | |  \n" +
-            "   \\  /    _| |_ \n" +
-            "    \\/    |_____|";
+             "   \\  /    _| |_ \n" +
+             "    \\/    |_____|";
 
         String result = RomanPrinter.print(6);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrint7AsAsciiArt() {
+        String expected =
+              "__      __ _____  _____ \n" +
+            "\\ \\    / /|_   _||_   _|\n" +
+            " \\ \\  / /   | |    | |  \n" +
+            "  \\ \\/ /    | |    | |  \n" +
+             "   \\  /    _| |_  _| |_ \n" +
+             "    \\/    |_____||_____|";
+
+        String result = RomanPrinter.print(7);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrint8AsAsciiArt() {
+        String expected =
+              "__      __ _____  _____  _____ \n" +
+            "\\ \\    / /|_   _||_   _||_   _|\n" +
+            " \\ \\  / /   | |    | |    | |  \n" +
+            "  \\ \\/ /    | |    | |    | |  \n" +
+             "   \\  /    _| |_  _| |_  _| |_ \n" +
+             "    \\/    |_____||_____||_____|";
+
+        assertEquals(expected, RomanPrinter.print(8));
+    }
+
+    @Test
+    public void shouldPrint9AsAsciiArt() {
+        String expected =
+            " _____ __   __\n" +
+            "|_   _|\\ \\ / /\n" +
+            "  | |   \\ V / \n" +
+            "  | |    > <  \n" +
+            " _| |_  / . \\ \n" +
+            "|_____|/_/ \\_\\";
+
+        String result = RomanPrinter.print(9);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrint10AsAsciiArt() {
+        String expected =
+            "__   __\n" +
+            "\\ \\ / /\n" +
+            " \\ V / \n" +
+            "  > <  \n" +
+            " / . \\ \n" +
+            "/_/ \\_\\";
+
+        String result = RomanPrinter.print(10);
 
         assertEquals(expected, result);
     }
