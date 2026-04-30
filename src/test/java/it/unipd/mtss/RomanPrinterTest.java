@@ -171,4 +171,19 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldPrint50AsAsciiArt() {
+        String expected =
+            " _      \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |____ \n" +
+            "|______|";
+
+        String result = RomanPrinter.print(50);
+
+        assertEquals(expected, result);
+    }
 }

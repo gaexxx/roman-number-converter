@@ -113,4 +113,77 @@ public class IntegerToRomanTest {
             assertEquals(expected[i - 1], IntegerToRoman.convert(i));
         }
     }    
+
+    // test mirati sui casi importanti del range 21..50
+    @Test
+    public void shouldConvert24ToXXIV() {
+        int number = 24;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XXIV", result);
+    }
+
+    @Test
+    public void shouldConvert29ToXXIX() {
+        int number = 29;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XXIX", result);
+    }
+
+    @Test
+    public void shouldConvert30ToXXX() {
+        int number = 30;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XXX", result);
+    }
+
+    @Test
+    public void shouldConvert39ToXXXIX() {
+        int number = 39;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XXXIX", result);
+    }
+
+    @Test
+    public void shouldConvert40ToXL() {
+        int number = 40;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XL", result);
+    }
+
+    @Test
+    public void shouldConvert44ToXLIV() {
+        int number = 44;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XLIV", result);
+    }
+
+    @Test
+    public void shouldConvert49ToXLIX() {
+        int number = 49;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XLIX", result);
+    }
+
+    @Test
+    public void shouldConvert50ToL() {
+        int number = 50;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("L", result);
+    }
 }
