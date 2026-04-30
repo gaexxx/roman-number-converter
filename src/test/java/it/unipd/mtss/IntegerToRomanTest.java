@@ -186,4 +186,68 @@ public class IntegerToRomanTest {
 
         assertEquals("L", result);
     }
+
+    // test mirati sui casi importanti del range 51..100
+    @Test
+    public void shouldConvert58ToLVIII() {
+        int number = 58;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("LVIII", result);
+    }
+
+    @Test
+    public void shouldConvert74ToLXXIV() {
+        int number = 74;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("LXXIV", result);
+    }
+
+    @Test
+    public void shouldConvert89ToLXXXIX() {
+        int number = 89;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("LXXXIX", result);
+    }
+
+    @Test
+    public void shouldConvert90ToXC() {
+        int number = 90;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void shouldConvert94ToXCIV() {
+        int number = 94;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XCIV", result);
+    }
+
+    @Test
+    public void shouldConvert99ToXCIX() {
+        int number = 99;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("XCIX", result);
+    }
+
+    @Test
+    public void shouldConvert100ToC() {
+        int number = 100;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("C", result);
+    }
 }
