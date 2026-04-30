@@ -8,7 +8,7 @@
 Convertitore da numeri arabi a numeri romani per i primi 1000 interi, con stampa in ASCII art.
 
 ![Build](https://github.com/gaexxx/roman-number-converter/actions/workflows/build.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/gaexxx/roman-number-converter/badge.svg)](https://coveralls.io/github/gaexxx/roman-number-converter)
+[![Coverage Status](https://coveralls.io/repos/github/gaexxx/roman-number-converter/badge.svg?branch=main)](https://coveralls.io/github/gaexxx/roman-number-converter?branch=main)
 
 ## Requisiti
 
