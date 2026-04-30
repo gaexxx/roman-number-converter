@@ -250,4 +250,68 @@ public class IntegerToRomanTest {
 
         assertEquals("C", result);
     }
+
+    // test mirati sui casi importanti del range 101..500
+    @Test
+    public void shouldConvert149ToCXLIX() {
+        int number = 149;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CXLIX", result);
+    }
+
+    @Test
+    public void shouldConvert244ToCCXLIV() {
+        int number = 244;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CCXLIV", result);
+    }
+
+    @Test
+    public void shouldConvert399ToCCCXCIX() {
+        int number = 399;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CCCXCIX", result);
+    }
+
+    @Test
+    public void shouldConvert400ToCD() {
+        int number = 400;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CD", result);
+    }
+
+    @Test
+    public void shouldConvert444ToCDXLIV() {
+        int number = 444;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CDXLIV", result);
+    }
+
+    @Test
+    public void shouldConvert499ToCDXCIX() {
+        int number = 499;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CDXCIX", result);
+    }
+
+    @Test
+    public void shouldConvert500ToD() {
+        int number = 500;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("D", result);
+    }
 }
