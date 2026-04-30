@@ -314,4 +314,50 @@ public class IntegerToRomanTest {
 
         assertEquals("D", result);
     }
+
+    // test mirati sui casi importanti del range 501..1000
+    @Test
+    public void shouldConvert899ToDCCCXCIX() {
+        int number = 899;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("DCCCXCIX", result);
+    }
+
+    @Test
+    public void shouldConvert900ToCM() {
+        int number = 900;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CM", result);
+    }
+
+    @Test
+    public void shouldConvert944ToCMXLIV() {
+        int number = 944;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CMXLIV", result);
+    }
+
+    @Test
+    public void shouldConvert999ToCMXCIX() {
+        int number = 999;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("CMXCIX", result);
+    }
+
+    @Test
+    public void shouldConvert1000ToM() {
+        int number = 1000;
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals("M", result);
+    }    
 }
