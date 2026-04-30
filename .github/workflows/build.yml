@@ -1,0 +1,50 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/**
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout del repository
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      # Setup Java
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      # Compile
+      - name: Compile project
+        run: mvn -B compile
+
+      # Test
+      - name: Run tests
+        run: mvn -B test
+
+      # Static analysis
+      - name: Run Checkstyle
+        run: mvn -B package
+
+      # Code coverage
+      - name: Run tests with coverage
+        run: mvn clean test
+
+      - name: Upload coverage to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: mvn coveralls:report
