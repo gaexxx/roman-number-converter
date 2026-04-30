@@ -68,7 +68,7 @@ public class RomanPrinter {
     });
 
     LETTERS.put('M', new String[]{
-        "__  __",
+        " __  __",
         "|  \\/  |",
         "| \\  / |",
         "| |\\/| |",
