@@ -231,4 +231,19 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenPrintingZero() {
+        RomanPrinter.print(0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenPrintingNegative() {
+        RomanPrinter.print(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenPrintingGreaterThan1000() {
+        RomanPrinter.print(1001);
+    }
 }

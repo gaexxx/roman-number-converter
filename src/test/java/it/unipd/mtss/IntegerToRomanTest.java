@@ -359,5 +359,21 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
 
         assertEquals("M", result);
-    }    
+    }
+    
+    // test out of bound
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenNumberIsZero() {
+        IntegerToRoman.convert(0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenNumberIsNegative() {
+        IntegerToRoman.convert(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenNumberIsGreaterThan1000() {
+        IntegerToRoman.convert(1001);
+    }
 }
